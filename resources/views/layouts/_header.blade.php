@@ -12,7 +12,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-
+                <li class="nav-item {{ isset($category)?'':'active' }}"><a class="nav-link" href="{{ route('topics.index') }}">话题</a></li>
+                <li class="nav-item {{ isset($category)&&$category->id==1?'active':'' }}"><a class="nav-link" href="{{ route('categories.show', 1) }}">分享</a></li>
+                <li class="nav-item {{ isset($category)&&$category->id==2?'active':'' }}"><a class="nav-link" href="{{ route('categories.show', 2) }}">教程</a></li>
+                <li class="nav-item {{ isset($category)&&$category->id==3?'active':'' }}"><a class="nav-link" href="{{ route('categories.show', 3) }}">问答</a></li>
+                <li class="nav-item {{ isset($category)&&$category->id==4?'active':'' }}"><a class="nav-link" href="{{ route('categories.show', 4) }}">公告</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->
